@@ -1,0 +1,255 @@
+/*GENERAL*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; 
+}
+
+body{
+    background-color: #202124;
+    height: 100vh;
+}
+
+
+/*HEADER*/
+
+header{
+    display: flex;
+    justify-content: end;
+    height: 60px;
+    padding: 0 18px;
+}
+
+header .options{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header .options a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+header .options a:hover{
+    text-decoration: underline;
+    color: whitesmoke;
+}
+
+header .options a img{
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
+
+.dots-logo{
+    display: inline-block;
+    background-image: url(images/dots-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+}
+
+
+
+/*MAIN - BARRA DE BUSQUEDA*/
+
+main{
+    height: calc(100% - 60px - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+main .container figure{
+    height: 92px;
+}
+
+main .container figure img{
+    height: 100%;
+}
+
+main .container .searcher{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    height: 48px;
+    width: 584px;
+    max-width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #5f6368;
+    border-radius: 24px;
+}
+
+main .container .searcher:hover{
+    background-color: #353536;
+    border: none;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.23);
+}
+
+main .container .searcher .searchbtns{
+    height: 44x;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+main .container .searcher .searchbtns button{
+    border: none;
+    background-color: transparent;
+    padding-left: 20px;
+}
+
+main .container .searcher input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: whitesmoke;
+    font-size: 14px;
+    outline: none;
+}
+
+main .container .searcher-buttons{
+    display: flex;
+    gap: 15px;
+}
+
+main .container .searcher-buttons button{
+    background-color: #303134;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    color: whitesmoke;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+main .container .searcher-buttons button:hover{
+    background-color: #303134;
+    border: 1px solid #5f6368;
+}
+
+main .container p{
+    font-size: small;
+    color: whitesmoke;
+}
+
+.search-logo{
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background-image: url(images/search-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.micro-logo{
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-image: url(images/micro-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.camera-logo{
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-image: url(images/camera-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+/*FOOTER*/
+
+footer {
+    background-color: #171717;
+    padding: 20px 0;
+    text-align: center;
+    
+}
+
+footer section {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    color: #999da2;
+}
+
+footer section.more-info {
+    border-top: #333333 solid 1px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+footer section.more-info div {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer section.more-info div a {
+    color: #999da2;
+    text-decoration: none;
+}
+
+footer section.more-info div a:hover {
+    color: #999da2;
+    text-decoration: underline;
+}
+
+
+
+/* DISEÑO RESPONSIVE */
+@media (max-width: 768px) {
+    .searcher .consulta {
+        width: 100%;
+        padding-right: 60px;
+    }
+
+    header .options {
+        justify-content: center;
+    }
+
+    footer section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer section.more-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer section.more-info div {
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    main .container .searcher {
+        width: 90%;
+    }
+}
